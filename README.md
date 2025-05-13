@@ -1,5 +1,31 @@
 # Linux
 
+`/usr/local/bin` is a directory on Unix-like operating systems (like Linux and macOS) that holds **executable programs** (binaries) installed **locally by the system administrator or user**, rather than by the operating system's package manager.
+
+### Breakdown:
+
+* `/usr` → contains user-related programs and data.
+* `/usr/local` → meant for software installed **locally**, not managed by the system’s package manager (like `apt`, `yum`, or `brew`).
+* `/usr/local/bin` → holds **executable files** (like scripts or binary programs) that are installed manually or by custom installers.
+
+### Why it matters:
+
+* It's typically included in your `$PATH`, so executables placed there can be run from anywhere in the terminal without needing to specify the full path.
+* It's a safe place to put your own scripts or tools so they don’t get overwritten by system updates.
+
+### Example use case:
+
+If you write a script `myscript.sh`, you might do:
+
+```bash
+chmod +x myscript.sh
+sudo mv myscript.sh /usr/local/bin/myscript
+```
+
+Now you can run `myscript` from any terminal session, just like any regular command.
+
+
+
 ## boot volume
 usually contain the os and necessary file systems to boot the instance.
 often persistent and a type of block storage.
